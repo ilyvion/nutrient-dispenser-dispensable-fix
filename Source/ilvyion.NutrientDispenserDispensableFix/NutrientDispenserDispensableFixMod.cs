@@ -15,4 +15,14 @@ public class NutrientDispenserDispensableFixMod : Mod
     {
         Log.Error($"[ilyvion's Nutrient Dispenser Dispensable Fix] {msg}");
     }
+
+    public static void Message(string msg)
+    {
+        Log.Message($"[ilyvion's Nutrient Dispenser Dispensable Fix] {msg}");
+    }
+
+    public static void Dump(string msg, object thing)
+    {
+        Log.Message($"[ilyvion's Nutrient Dispenser Dispensable Fix] {msg}: {thing}");
+    }
 }
