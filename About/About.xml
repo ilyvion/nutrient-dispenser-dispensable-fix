@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>ilvyion.NutrientDispenserDispensableFix</packageId>
+    <name>Nutrient Dispenser Dispensable Fix</name>
+    <author>ilyvion</author>
+    <description>This mod only does only one thing -- it patches RimWorld to use Building_NutrientPasteDispenser.DispensableDef when choosing what to dispense and pick as a meal instead of using the hard-coded value of ThingDefOf.MealNutrientPaste. This won't change anything for the regular Nutrient paste dispenser, since for it those are one and the same, but it means that modders can rely on that property for their custom dispensers.</description>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <modVersion>0.1.0</modVersion>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <downloadUrl>https://steamcommunity.com/workshop/filedetails/?id=2009463077</downloadUrl>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>brrainz.harmony</li>
+    </loadAfter>
+</ModMetaData>
