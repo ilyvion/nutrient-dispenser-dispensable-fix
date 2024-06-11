@@ -14,8 +14,6 @@ The full list of fixes this mod does is as follows:
 -   In `FoodUtility.BestFoodSourceOnMap`, where the logic allows choosing an "empty" dispenser: also require the dispenser to have an adjacent, accessible hopper. Without this additional check, the game can pick a dispenser without a hopper, thinking it can be filled later, but since one without hoppers can't, that job can never happen, and the pawn just ends up not eating at all.
 -   In `ThingListGroupHelper.Includes`, use `ThingDef.IsFoodDispenser` to decide whether a given def is a food dispenser instead of a hardcoded check against exactly `Building_NutrientPasteDispenser`. This allows inheriting from `Building_NutrientPasteDispenser` to work as expected.
 
-This mod only does only one thing -- it patches RimWorld to use `Building_NutrientPasteDispenser.DispensableDef` when choosing what to dispense and pick as a meal instead of using the hard-coded value of `ThingDefOf.MealNutrientPaste`. This won't change anything for the regular Nutrient paste dispenser, since for it those are one and the same, but it means that modders can rely on that property for their custom dispensers.
-
 ## License
 
 Licensed under either of
