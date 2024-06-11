@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Added a patch for a bug in RimWorld where if you have dispensers without hoppers or without a way to fill those hoppers, pawns can sometimes end up choosing one that isn't actually usable, and if this happens, they won't eat anything at all, despite needing to.
+
 ## [0.1.1] - 2024-06-10
 
 ### Fixed
