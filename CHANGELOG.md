@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Added the ability to define what a nutrient paste dispenser dispenses using XML alone. See README for more details.
+
 ## [0.2.0] - 2024-06-11
 
 ### Added

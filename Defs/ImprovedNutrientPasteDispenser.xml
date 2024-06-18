@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BuildingBase" Name="ImprovedNutrientPasteDispenserBase" Abstract="True">
+        <thingClass>ilvyion.NutrientDispenserDispensableFix.Building_NutrientPasteDispenserImproved</thingClass>
+        <building>
+            <isMealSource>true</isMealSource>
+        </building>
+        <!-- Add this part to your own ThingDef -->
+        <!--<modExtensions>
+            <li Class="ilvyion.NutrientDispenserDispensableFix.ImprovedNutrientPasteDispenserModExtension">
+                <dispensableDef>MealNutrientPaste</dispensableDef>
+            </li>
+        </modExtensions>-->
+    </ThingDef>
+
+    <ThingDef ParentName="ImprovedNutrientPasteDispenserBase">
+        <defName>SimpleMealPasteDispenser</defName>
+        <label>simple meal paste dispenser</label>
+        <description>A version of the nutrient paste dispenser that produces simple meals.</description>
+        <graphicData>
+            <texPath>Things/Building/Production/NutrientDispenser</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <color>(216,172,82)</color>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(3,4)</drawSize>
+            <damageData>
+                <rect>(0.02,0.25,2.96,2.85)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+            </damageData>
+            <shadowData>
+                <volume>(2.87,0.75,3.05)</volume>
+                <offset>(0,0,0.38)</offset>
+            </shadowData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <blockWind>true</blockWind>
+        <fillPercent>1</fillPercent>
+        <statBases>
+            <WorkToBuild>2500</WorkToBuild>
+            <MaxHitPoints>350</MaxHitPoints>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <building>
+            <wantsHopperAdjacent>true</wantsHopperAdjacent>
+            <nutritionCostPerDispense>0.5</nutritionCostPerDispense>
+            <soundDispense>DispensePaste</soundDispense>
+            <forceShowRoomStats>true</forceShowRoomStats>
+            <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+        </building>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>400</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable" />
+            <li Class="CompProperties_Breakdownable" />
+        </comps>
+        <forceDebugSpawnable>true</forceDebugSpawnable>
+        <size>(3,4)</size>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <interactionCellOffset>(0,0,3)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <uiOrder>2130</uiOrder>
+        <constructEffect>ConstructMetal</constructEffect>
+        <canOverlapZones>false</canOverlapZones>
+        <modExtensions>
+            <li Class="ilvyion.NutrientDispenserDispensableFix.ImprovedNutrientPasteDispenserModExtension">
+                <dispensableDef>MealSimple</dispensableDef>
+            </li>
+        </modExtensions>
+    </ThingDef>
+</Defs>

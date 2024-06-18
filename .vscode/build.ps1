@@ -19,6 +19,8 @@ Remove-Item -Path $Target -Recurse -ErrorAction SilentlyContinue
 # copy mod files
 Copy-Item -Path Assemblies $Target\Assemblies -Recurse
 
+Copy-Item -Path Defs $Target\Defs -Recurse
+
 New-Item -Path $Target -ItemType Directory -Name About
 Copy-Item -Path About\About.xml $Target\About
 Copy-Item -Path About\Preview.png $Target\About

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
     <packageId>ilvyion.NutrientDispenserDispensableFix</packageId>
-    <name>Nutrient Dispenser Dispensable Fix</name>
+    <name>Nutrient Dispenser Improvements and Fixes</name>
     <author>ilyvion</author>
-    <description>This mod only does only one thing -- it patches RimWorld to use Building_NutrientPasteDispenser.DispensableDef when choosing what to dispense and pick as a meal instead of using the hard-coded value of ThingDefOf.MealNutrientPaste. This won't change anything for the regular Nutrient paste dispenser, since for it those are one and the same, but it means that modders can rely on that property for their custom dispensers.</description>
+    <description>This mod has only one goal -- to bring the nutrient paste dispenser up to the standard I believe it can have. This mainly consists of patching RimWorld to use Building_NutrientPasteDispenser.DispensableDef when choosing what to dispense and pick as a meal instead of using the hard-coded value of ThingDefOf.MealNutrientPaste, but also includes goals like being able to create custom dispensers entirely from XML. While this mod does patch code in the regular nutrient paste dispenser to fix a few Rimworld bugs, the main purpose of these patches is to make it so that modders who subclass Building_NutrientPasteDispenser can rely on DispensableDef doing the right thing for their custom dispensers.</description>
     <supportedVersions>
         <li>1.5</li>
     </supportedVersions>

@@ -7,7 +7,6 @@ namespace ilvyion.NutrientDispenserDispensableFix;
 [HarmonyPatch(typeof(Building_NutrientPasteDispenser), nameof(Building_NutrientPasteDispenser.TryDispenseFood))]
 internal static class RimWorld_Building_NutrientPasteDispenser_TryDispenseFood_Fix
 {
-
     private static readonly FieldInfo _field_ThingDefOf_MealNutrientPaste = AccessTools.Field(
         typeof(ThingDefOf), nameof(ThingDefOf.MealNutrientPaste));
 
