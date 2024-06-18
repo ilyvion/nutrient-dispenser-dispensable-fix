@@ -35,7 +35,7 @@ To use this XML-only nutrient dispenser, you make a `ThingDef` like the followin
 </ThingDef>
 ```
 
-You can look at an example dispenser definition included with this mod in [Defs\ImprovedNutrientPasteDispenser.xml](Defs\ImprovedNutrientPasteDispenser.xml). It does not show up in the game directly, but can be spawned in using the debug tools. It is set up to dispense simple meals.
+You can look at an example dispenser definition included with this mod in [Defs/ImprovedNutrientPasteDispenser.xml](Defs/ImprovedNutrientPasteDispenser.xml). It does not show up in the game directly, but can be spawned in using the debug tools. It is set up to dispense simple meals.
 
 ## License
 
