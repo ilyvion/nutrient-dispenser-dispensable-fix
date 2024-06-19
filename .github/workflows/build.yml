@@ -30,6 +30,7 @@ jobs:
                   path: |
                       About/
                       Assemblies/
+                      Defs/
                       LICENSE
                       LICENSE.Apache-2.0
                       LICENSE.MIT
