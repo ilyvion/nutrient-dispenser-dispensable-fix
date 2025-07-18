@@ -14,7 +14,10 @@ internal static class RimWorld_FoodUtility_BestFoodSourceOnMap_Fix
     [
         new(OpCodes.Ldarg_1),
         new(OpCodes.Isinst, typeof(Building_NutrientPasteDispenser)),
+#if v1_5
         new(OpCodes.Dup),
+#endif
+        new(OpCodes.Stloc_1),
     ];
 
     //Check if we can find the methods to patch. Otherwise, Harmony throws an error if given no methods in HarmonyTargetMethods.

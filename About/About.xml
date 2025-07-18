@@ -6,6 +6,7 @@
     <description>This mod has only one goal -- to bring the nutrient paste dispenser up to the standard I believe it can have. This mainly consists of patching RimWorld to use Building_NutrientPasteDispenser.DispensableDef when choosing what to dispense and pick as a meal instead of using the hard-coded value of ThingDefOf.MealNutrientPaste, but also includes goals like being able to create custom dispensers entirely from XML. While this mod does patch code in the regular nutrient paste dispenser to fix a few Rimworld bugs, the main purpose of these patches is to make it so that modders who subclass Building_NutrientPasteDispenser can rely on DispensableDef doing the right thing for their custom dispensers.</description>
     <supportedVersions>
         <li>1.5</li>
+        <li>1.6</li>
     </supportedVersions>
     <modVersion>0.3.1</modVersion>
     <modDependencies>

@@ -6,28 +6,43 @@
         <LangVersion>12.0</LangVersion>
         <Nullable>enable</Nullable>
 
+        <EnableNETAnalyzers>True</EnableNETAnalyzers>
+        <AnalysisLevel>preview-all</AnalysisLevel>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>5</WarningLevel>
+
         <RootNamespace>ilvyion.NutrientDispenserDispensableFix</RootNamespace>
         <AssemblyName>ilvyion.NutrientDispenserDispensableFix</AssemblyName>
-        <VersionPrefix>0.3.1</VersionPrefix>
 
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>
 
     <PropertyGroup>
-        <OutputPath>../Assemblies</OutputPath>
+        <OutputPath>../$(RimWorldVersion)/Assemblies</OutputPath>
+        <DebugType>portable</DebugType>
+        <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-        <DebugType>none</DebugType>
         <Optimize>true</Optimize>
-        <DebugSymbols>false</DebugSymbols>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <DebugType>portable</DebugType>
         <Optimize>false</Optimize>
-        <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
+
+    <Choose>
+        <When Condition="'$(RimWorldVersion)' == '1.5'">
+            <PropertyGroup>
+                <DefineConstants>$(DefineConstants);v1_5</DefineConstants>
+            </PropertyGroup>
+        </When>
+        <When Condition="'$(RimWorldVersion)' == '1.6'">
+            <PropertyGroup>
+                <DefineConstants>$(DefineConstants);v1_6</DefineConstants>
+            </PropertyGroup>
+        </When>
+    </Choose>
 
     <ItemGroup>
         <PackageReference Include="Lib.Harmony" Version="2.2.2">
